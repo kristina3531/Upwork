@@ -1,0 +1,155 @@
+@import normalize
+@import fonts
+
+@function rem($value)
+	@return unquote(($value/1px)/16 + "rem")
+
+body
+	font-family: Poppins, Arial, sans-serif
+	color: #333
+
+.container
+	max-width: rem(970px)
+	padding: 0 rem(15px)
+	margin: 0 auto
+
+.header
+	padding: rem(50px) rem(70px)
+	background: #fbfbfb url(../img/header-bg.png) no-repeat 90% 100%
+	background-size: 90%
+	&-logo, &-text, .copywright
+		text-align: center
+	&-text
+		margin-bottom: rem(40px)
+		&::before
+			content: ''
+			display: block
+			margin: rem(45px) auto
+			width: rem(100px)
+			height: rem(5px)
+			background-color: rgba(#747474, .5)
+		span
+			display: block
+		&__deals
+			color: #333
+			font-size: rem(26px)
+			line-height: rem(35px)
+		&__accept
+			color: #cc0034
+			font-size: rem(18px)
+			line-height: rem(25px)
+			font-weight: 300
+			font-family: 'Source Code Pro'
+	&-form
+		width: rem(390px)
+		margin: 0 auto
+		label
+			font-size: rem(16px)
+			line-height: rem(30px)
+			font-weight: 300
+		input
+			width: 100%
+			height: rem(38px)
+			padding: 0 rem(20px)
+			border: 1px solid #ced4da
+			font-size: rem(14px)
+			font-weight: 300
+			font-family: Poppins
+			&:focus
+				border-color: darken(#ced4da, 20%)
+				outline: none
+				box-shadow: 1px 1px 5px rgba(#333, .4)
+		&__select
+			height: rem(38px)
+			position: relative
+			margin-bottom: rem(15px)
+			.arrow
+				position: absolute
+				border-style: solid
+				border-width: rem(7px) rem(7px) 0 rem(7px)
+				border-color: #333 transparent transparent transparent
+				top: 50%
+				right: rem(20px)
+				margin-top: rem(-2px)
+				pointer-events: none
+				transition: all .4s
+			select
+				cursor: pointer
+				width: 100%
+				height: 100%
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
+				padding: 0 rem(40px) 0 rem(20px)
+				border: 1px solid #ced4da
+				font-family: Poppins
+				color: #333
+				font-size: rem(14px)
+				font-weight: 300	
+				&:focus
+					border-color: darken(#ced4da, 20%)
+					outline: none
+					box-shadow: 1px 1px 5px rgba(#333, .4)				
+				&:active ~ .arrow
+					transform: rotate(180deg)
+
+		&__btn
+			width: 100%
+			height: rem(48px)
+			margin: rem(30px) 0
+			border: none
+			background-color: #e8224a
+			color: #fff
+			font-family: Poppins
+			font-size: rem(18px)
+			font-weight: 700
+			transition: all .3s
+			&:hover
+				background-color: darken(#e8224a, 10%)
+
+.results
+	padding: rem(65px) 0
+	background-color: #343390
+	color: #fff
+	&-list
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&__item
+			display: flex
+			align-items: center
+		&__icon
+			margin-right: rem(15px)
+		&__text
+			font-size: rem(14px)
+			line-height: rem(20px)
+			font-weight: rem(20px)
+		&__sum
+			font-size: rem(22px)
+			line-height: rem(30px)
+			font-weight: 600
+	
+.footer
+	padding: rem(60px) 0
+	background-color: #232265
+	color: #fff
+	&-content
+		&__item:not(:last-child)
+			margin-bottom: rem(30px)
+		&__title
+			font-size: rem(16px)
+			font-weight: 300
+			&::after
+				content: ''
+				display: block
+				width: rem(236px)
+				height: 1px
+				background-color: rgba(#fff, .2)
+				margin: rem(15px) 0 rem(20px)
+		&__text
+			font-size: rem(11px)
+			font-weight: 400
+			line-height: rem(18px)
+			font-family: "Arial MT", Arial, sans-serif
+			&:not(:last-child)
+				margin-bottom: 25px

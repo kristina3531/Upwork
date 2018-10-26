@@ -1,0 +1,15 @@
+
+.icon-list {
+	background-image: url('png/list.png');
+	background-repeat: no-repeat;
+}
+
+.icon-rent {
+	background-image: url('png/rent.png');
+	background-repeat: no-repeat;
+}
+
+.icon-user {
+	background-image: url('png/user.png');
+	background-repeat: no-repeat;
+}
